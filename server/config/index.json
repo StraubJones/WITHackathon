@@ -1,3 +1,19 @@
 {
-  "routerPipeline": []
+  "routerPipeline": [
+    "./style-bundles.js",
+    "./mount-api.js",
+    "./client-bundles.js",
+    "./catch-all-index-page.js"
+  ],
+  "spa": {
+    "browserify": {
+      "external": [
+        "react",
+        "react-dom"
+      ],
+      "transform": [
+        "reactify"
+      ]
+    }
+  }
 }
